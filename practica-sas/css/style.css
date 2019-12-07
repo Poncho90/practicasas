@@ -1,0 +1,18 @@
+/* Error: unmatched "}".
+ *    ,
+ * 30 | }
+ *    | ^
+ *    '
+ *   sass/_mixin.scss 30:1  @import
+ *   sass/style.scss 2:9    root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: unmatched "}".\a    \2577 \a 30 \2502  }\a    \2502  ^\a    \2575 \a   sass/_mixin.scss 30:1  @import\a   sass/style.scss 2:9    root stylesheet';
+}

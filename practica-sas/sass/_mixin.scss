@@ -1,0 +1,30 @@
+@mixin clasebuton($color,$letra,$letra-color:pink) {
+    font-size: $letra;
+    border: $color;
+    color:blue;
+    background-color:red;
+}
+@mixin evalualista($elemento){
+    @if $elemento == 3{
+        width: 20px;
+    }@else if $elemento==2{
+        width: 40px;
+    }
+    // @else $elemento==1{
+    //     width: 100px;
+    
+}
+@mixin recorreLista($lista) {
+    @each $elemento in $lista {
+        #item-#{elemento}{
+            width: #{$elemento}px;
+        }
+    }
+}
+
+@mixin printpantalla($lista){
+    // @for $i from 1 through lighten($list){
+    //     @debug nth($list,$i);
+    //;
+    }
+}

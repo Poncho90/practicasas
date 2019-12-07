@@ -1,0 +1,51 @@
+@import "variables";
+@import "mixin";
+@import "clase";
+
+.lista{
+    & img{
+        &:nth-child(1){
+            @include recorreLista(1);
+        }
+        &:nth-child(2){
+            @include recorreLista(2);
+        }
+        &:nth-child(3){
+            @include recorreLista(3);
+        }
+    }
+    @include recorreLista($medidas); 
+    @include printpantalla($medidas)
+}
+
+
+.resete{
+    margin: 0;
+    padding: 0;
+    border: 0;;
+}
+.button{
+    @include clasebuton(2.3px solid pink,34px);
+}
+header{
+    background:colorhead;
+}
+footer{
+    background: colorfooter;
+}
+#content{
+    width: 15px / 30px;
+    @extend %flexed;
+    @include clasebuton ($letramixin,$bodemixin);
+    background-image: url();
+    & img{
+        @extend .resete;
+        &:nth-child(1){
+            visibility: hidden;
+
+        }
+        
+        width: 300px;
+        
+    }
+}
